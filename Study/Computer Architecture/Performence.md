@@ -1,9 +1,8 @@
 <h5>Responce Time</h5>
-일을 수행하는 데 얼마나 걸리는가?
+응답 시간. 일을 수행하는 데 얼마나 걸리는가?
 
 <h5>Throughput</h5>
-단위 시간 당 총 작업량
-
+단위 시간 당 총 작업량. 컴퓨터 시스템의 처리 능력을 나타내는 처리량이라고 부른다.
 <h5>Define Performance</h5>
 `CPU`의 성능은 실행 시간이 적을 수록 늘어난다. 실행 시간을 기준으로 한 성능은 다음과 같다.
 $$\text{Performence} = \frac{1}{\text{Excution Time}}$$
@@ -48,4 +47,7 @@ $$\begin{align*} \text{CPU Time}&= \text{Instruction Count}\times \text{CPI}\tim
 
 을 만족한다. 간단히 $\text{CPU Time} =\text{IC}\times \text{CPI}\times \text{Clock Period}$로 표현한다.
 
-[[ISA]]가 같다는 조건이 있을 시 $\text{IC}$가 동일하다.
+[[ISA]]가 같다는 조건이 있을 시 $\text{IC}$가 동일하다. $\text{IC}$는 프로그램, 컴파일러의 영향을 받는다.
+
+만약 다른 명령어의 클래스가 다른 클럭 사이클의 횟수를 취한다면,
+$$\sum_{i=1}$$

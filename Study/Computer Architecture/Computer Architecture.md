@@ -14,3 +14,4 @@
 컴퓨터는 오직 [[Data]]와 [[Instruction]]만을 이해할 수 있다.
 
 [[Performence]]
+[[Power Wall]]

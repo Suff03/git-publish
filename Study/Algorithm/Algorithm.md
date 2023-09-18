@@ -9,7 +9,6 @@
 안타깝게도 이는 불가능하다고 판정받았다.
 1936년 앨런 튜링에 의해 고안된 [[Halting Problem]]은 처음으로 증명된 판정 불가능한 문제이다. 
 
-
 <h5>Sorting</h5>
 [[Insertion Sort]]
 [[Merge Sort]]
