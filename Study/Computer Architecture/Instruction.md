@@ -20,11 +20,11 @@
 고급 언어는 어떻게 저급 언어로 변환될까? 고급 언어에는 크게 두 가지 방식이 있다.
 
 * Compiled Language
-	대표적으로 `C`가 있다.
+	대표적으로 [[C]]가 있다.
 	`Compiler`가 `Source Code`를 쭉 훑어보며 처음부터 끝까지 저급 언어로 컴파일한다. 컴파일러를 통해 저급 언어로 변환된 코드를 `Object Code`라고 한다.
 
 * Interpreted Language
-	대표적으로 `Python`이 있다.
+	대표적으로 [[Python]]이 있다.
 	`Interpreter`가 `Source Code`를 한 줄씩 저급 언어로 변환한다. $N$줄에 문법 실수가 있더라도 $N-1$줄까지 실행된다.
 	
 ![[compiler-interpreter-working.webp]]
