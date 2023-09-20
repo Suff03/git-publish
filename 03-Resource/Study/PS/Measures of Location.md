@@ -13,7 +13,7 @@ $$
     \end{equation}
 $$
 
-<h5>sample median</h5>
+<h5>trimmed median</h5>
 $$\overline{x}_{tr(10)}$$
 computed by "trimming away" a certain percent of both the largest and the smallest set of values.
 

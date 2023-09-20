@@ -247,3 +247,73 @@ test_a.T.dot(test_a) #aTa
 	       [27, 36, 45]])
 ```
 
+<h5>All & Any</h5>
+Array의 데이터 전부 또는 일부가 조건에 만족 여부를 반환한다.
+
+```python
+a = np.arange(10)
+np.any(a > 5), np.all(a > 5)
+>>> (True, False)
+```
+
+<h5>Comparison Operation</h5>
+넘파이는 배열의 크기가 동일 할 때 요소들간 비교의 결과를 `Boolean`형으로 반환하여 돌려준다.
+
+```python
+test_a = np.array([1, 3, 0], float)
+test_b = np.array([5, 2, 1], float)
+test_a > test_b
+>>> array([False,  True, False])
+```
+
+* logical 함수
+	다양한 조건을 넣을 수 있다.
+	
+```python
+a = np.array([1, 3, 0], float)
+np.logical_and(a > 0, a < 3) # 0 < x < 3
+>>> array([ True, False, False])
+
+b = np.array([True, False, True], bool)
+np.logical_not(b)
+>>> array([ False, True, False], dtype=bool)
+
+c = np.array([False, True, False], bool)
+np.logical_or(b, c)
+>>> array([ True, True, True], dtype=bool)
+```
+
+<h5>np.where</h5>
+조건을 만족하는 위치 `index`를 반환한다.
+-> np.where(condition, True 일시, False 일시)까지 써주면 `Broadcasting`이 가능하다.
+
+```python
+a = np.array([1, 3, 0], float)
+np.where(a > 0, 3, 2)
+>>> array([3, 3, 2])
+
+a = np.arange(5, 15)
+np.where(a > 10)
+>>> (array([6, 7, 8, 9], dtype=int64),)
+```
+
+<h5>Argmax & Argmin</h5>
+array내 최댓값 또는 최솟값의 `index`를 반환함
+
+```python
+a = np.array([1,2,4,5,8,78,23,3])
+np.argmax(a), np.argmin(a)
+>>> (5, 0)
+```
+
+<h5>Fancy Index</h5>
+넘파이는 `index`를 사용해서 값을 추출할 수 있다.
+
+```python
+a = np.array([2, 4, 6, 8], float)
+b = np.array([0, 0, 1, 3, 2, 1], int) # 반드시 integer
+a.take(b)
+>>> array([2., 2., 4., 8., 6., 4.])
+```
+
+

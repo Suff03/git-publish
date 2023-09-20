@@ -15,6 +15,12 @@ MERGE-SORT(A, p, r)
 
 ![[Pasted image 20230917135459.png]]
 
+<h5>Pros</h5>
+어떤 `Input`이 들어오든 간에 시간 복잡도가 똑같다. 쪼개진 배열을 조합할 때도 $\mathcal{O}(n)$을 넘지 않는다. 즉, Merge Sort는 $\mathcal{O}(n\log n)$을 보장한다.
+
+<h5>Cons</h5>
+$\mathcal{O}(n)$의 추가적인 공간이 필요하다.
+
 <h5>Time Complexity</h5>
-* Best : $nlog(n)$
-* Worst : $nlog(n)$
+* Best : $\mathcal{O}(n\log n)$
+* Worst : $\mathcal{O}(n\log n)$
