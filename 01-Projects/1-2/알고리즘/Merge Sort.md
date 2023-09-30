@@ -1,4 +1,11 @@
-<h5>합병 정렬</h5>
+tags: #divide-and-conquer #sort #algorithm 
+
+- Merge Sort의 전개 과정은?
+- Merge Sort의 시간 복잡도는?
+
+---
+
+##### 합병 정렬
 존 폰 노이만이 제안한 방법. [[Divide and Conquer]](분할 정복)를 이용한다.
 
 ```Python
@@ -15,13 +22,13 @@ MERGE-SORT(A, p, r)
 
 ![[Pasted image 20230917135459.png]]
 
-<h5>Pros</h5>
+##### Pros
 어떤 `Input`이 들어오든 간에 <u>시간 복잡도가 똑같다.</u> 쪼개진 배열을 조합할 때도 $\mathcal{O}(n)$을 넘지 않는다. 즉, Merge Sort는 $\mathcal{O}(n\log n)$을 보장한다.
 
-<h5>Cons</h5>
+##### Cons
 $\mathcal{O}(n)$의 추가적인 공간이 필요하다.
 
-<h5>Time Complexity</h5>
+##### Time Complexity
 Merge Sort는 [[Divide and Conquer]] 알고리즘이다.
 1. `Divide` 단계에서는 중간점을 계산한다. $\mathcal{O}(1)$ 시간이 소요된다.
 2. `Conquer` 단계에서는 재귀적으로 $2/n$의 두 개의 하위 배열을 정렬한다.

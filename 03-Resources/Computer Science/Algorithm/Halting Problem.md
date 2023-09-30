@@ -1,8 +1,15 @@
+tags : #algorithm
+
+- 정지 문제의 의의는?
+- 정지 문제의 증명 과정은?
+
+---
+
 * The set of all [[Computational Problem]]s is uncountable
 * The set of all `Algorithms` is countably infinite
 * not exist a 1:1 correspondence
 
-<h5>과정</h5>
+##### 과정
 
 Assume that there exists an algorithm that solves the `Halting Problem`.
 ```c

@@ -1,11 +1,15 @@
+tags : #python 
+
+---
+
 판다스는 [[Python]]의 데이터 분석 라이브러리이다. R에서 사용되던 `data.frame`구조를 본뜬 `DataFrame`이라는 구조를 사용한다. 파이썬이라는 접근성이 좋은 언어 기반으로 동작하기 때문에 데이터 분석을 파이썬으로 입문하는 사람들이 필수적으로 사용하는 라이브러리가 되었다. 주요 코드는 Python이나 C로 작성되었다.
 
-<h5>Import</h5>
+##### Import
 ```python
 import pandas as pd
 ```
 
-<h5>Series, DataFrame</h5>
+##### Series, DataFrame
 ![[Pasted image 20230917153841.png]]
 `Series`는 [[NumPy]]에서 제공하는 1차원 배열과 비슷하지만, 각 데이터의 의미를 표시하는 `index`를 붙일 수 있다. 데이터 자체는 `value`라고 한다.
 
@@ -22,7 +26,7 @@ s1 = df["사과"]
 
 `NumPy`기반으로 제작되었기 때문에 `df.mean()`, `df1.sum()`등을 사용 가능하다.
 
-<h5>Indexing, Slicing</h5>
+##### Indexing, Slicing
 ![[Pasted image 20230917154532.png]]
 기존의 Python과 비슷하다.
 ```python
@@ -39,18 +43,18 @@ axis는 이를 참조하면 된다.
 df.iloc[:3, 1:].drop("C", axis=1)
 ```
 
-<h5>Sorting</h5>
+##### Sorting
 `sort_values`로 값을 기준으로 정렬할 수 있다. `ascending`이 True일 때 오름차순으로 정렬한다.
 ```python
 df.sort_values(["수학", "나이"], ascending=[0,1])
 ```
 
-<h5>Broadcasting</h5>
+##### Broadcasting
 `Broadcasting`은 기본적으로 `NumPy`의 `Broadcasting`과 비슷하다. 그러나 몇 가지 차이점이 있다. `Pandas`에서는 라벨링이 중요하다. 라벨이 맞지 않으면 없는 부분으로 `NaN`값을 채운다.
 
 `DataFrame`과 `Series`의 연산을 `Broadcasting`이라 칭할 수 있다.
 
-<h5>Boolean Indexing</h5>
+##### Boolean Indexing
 `bool` 자료형을 이용하여 인덱싱을 활용하는 기법.
 fill_value : 없는 값을 0으로 채우고 연산하라
 
@@ -66,7 +70,7 @@ df.loc[(~df["과학"].isnull()) | (df["수학"] > 90)]
 df.loc[df["소속"].isin(["문예부", "과학부", "다도부"])]
 ```
 
-<h5>Index & Columns</h5>
+##### Index & Columns
 * df.index, df.columns
 ```python
 list(df.index), df.columns
@@ -97,7 +101,7 @@ df.reindex(columns=["A팀", "B팀", "A팀", "E팀"], fill_value=0)
 df.sort_index(axis=1)
 ```
 
-<h5>Pivot & Pivot Table</h5>
+##### Pivot & Pivot Table
 ![[Pasted image 20230918145927.png]]
 `Pandas`를 이용해 유용한 데이터 분석을 다루려면 필히 알아야 하는 기능이다.
 
@@ -115,7 +119,7 @@ df.pivot_table("점수", index="반", columns="성별", aggfunc="mean")
 df.pivot(values="이름", index="반", columns="반등수")
 ```
 
-<h5>Unpivot</h5>
+##### Unpivot
 ![[Pasted image 20230918151101.png]]
 `Pivot`의 반댓말이다. 피벗된 자료를 다시 재구성 하는 과정이다.
 

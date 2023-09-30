@@ -1,3 +1,7 @@
+tags : #deeplearning 
+
+---
+
 ![[Pasted image 20230919145927.png]]
 활성화 함수는 입력값의 총합을 출력 신호로 바꿔주는 함수다.
 모델의 복잡도를 올릴 수 있어 비선형 문제를 해결하는데 중요한 역할을 한다.
@@ -18,14 +22,15 @@ $$
     \end{equation}
 $$
 
-<h5>Feature</h5>
+##### Feature
 [[Neural Network]]에서의 활성화 함수는 주로 `Non-Linear`하다. `Linear`한 함수를 사용할 시 층을 깊게 하는 의미가 없기 때문이다.
 
 *Ex)*
 $$\begin{align*} h(x)  &= cx \\ y(x)&= h(h(h(x))) \\ &=c\times c\times c\times x \\&=c^3x&(y(x)=ax) \end{align*} $$
 
 여러가지 활성화 함수의 종류에 대해 알아보자.
-<h5>Step Function</h5>
+
+##### Step Function
 ![[Pasted image 20230919153955.png]]
 임계값을 경계로 출력이 바뀌는 활성화 함수.
 [[Perceptron]]에선 활성화 함수로 `Step Function`를 이용한다.
@@ -39,13 +44,13 @@ $$
     \end{equation}
 $$
 
-<h5>Sigmoid Function</h5>
+##### Sigmoid Function
 ![[Pasted image 20230919154612.png]][[Backpropagation]]에 따라 가중치를 학습시키는데 미분을 사용하기 때문에 활성화 함수로 계단 함수를 사용하기 어렵다. 또한 계단 함수는 미분이 불가능할 뿐만 아니라, $0$ 또는 $1$의 극단적인 값을 전달하기 때문에 데이터의 정보를 크게 손실시켰다.
 
 `Sigmoid Function`은 S자와 유사한 완만한 시그모이드 커브 형태를 보이는 함수다. 시그모이드의 매끈함이 신경망 학습에서 중요한 역할을 한다.
 $$\sigma(x)=\frac{1}{1+e^{-x}}$$
 
-<h5>ReLU Function</h5>
+##### ReLU Function
 ![[Pasted image 20230919155111.png]]
 `ReLU Function`은 최근에 주로 이용되는 활성화 함수이다. `Rectified Linear Unit(정류된 선형 함수`의 뜻이다.
 
@@ -60,7 +65,7 @@ $$
     \end{equation}
 $$
 
-<h5>Softmax Function</h5>
+##### Softmax Function
 `Softmax Function`은 간단히 말해 총합이 $1$인 형태로 바꿔주는 함수다. [[Classification]] 문제에서 자주 사용된다.
 
 소프트맥스 함수의 출력은 `Probability`로 해석할 수 있다. 출력이 $0$에서 $1.0$ 사이의 실수이며, 출력의 총합이 1인 성질을 가지고 있기 때문이다.
@@ -76,5 +81,5 @@ $$\begin{align*} \sigma(a_k)=\frac{e^{a_{k}}}{\sum_{i=1}^n e^{a_{i}}}&=\frac{Ce^
 \\ &=\frac{e^{(a_{k}+\log C)}}{\sum_{i=1}^n e^{(a_{i}+\log C)}} \\ &=\frac{e^{(a_{k}+C')}}{\sum_{i=1}^n e^{(a_{i}+C')}}\end{align*} $$
 로 변환한 다음, $C'$에 입력 신호 중 **최댓값**을 사용해서 빼준다.
 
-<h5>Identity Function</h5>
+##### Identity Function
 `Identity Function`은 입력을 그대로 출력한다. [[Regression]] 문제에서 자주 사용된다. `Regression`에서의 출력층은 현재까지 계산된 값을 그대로 출력할 필요가 있기 때문에 항등 함수를 통해 현재까지 계산된 값을 그대로 출력한다.

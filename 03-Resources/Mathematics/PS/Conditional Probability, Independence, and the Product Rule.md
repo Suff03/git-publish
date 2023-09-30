@@ -1,4 +1,4 @@
-<h5>Conditional Provability</h5>
+##### Conditional Provability
 표본공간 $S$의 두  사건 $A$, $B$에 대하여 확률이 0이 아닌 사건 $A$가 일어났을 떄 사건 $B$가 일어날 확률을 사건 $A$가 일어났을 때의 사건 $B$의 **조건부확률**이라 한다.
 $$P(B \mid A)=\frac{P(A\cap B)}{P(A)}, P(A)>0$$
 
@@ -10,7 +10,7 @@ $$P(A \mid B)=P(A)$$
 $P(B'\mid A)$는 사건 $A$를 표본 공간으로 생각했을 때 사건 $B$의 여사건의 확률이므로,
 $$P(B'\mid A)=1-P(B\mid A)$$
 
-<h5>Mutually Exclusive vs Independence vs Dependence</h5>
+##### Mutually Exclusive vs Independence vs Dependence
 배반 사건과 독립 사건의 구분은
 * Mutually Exclusive : $A$와 $B$는 절대로 동시에 일어나지 않음. (교집합이 공집합)
 $$P(A\cup B)=P(A)+P(B)$$
@@ -20,7 +20,7 @@ $$P(A\cap B)=P(A)P(B)$$
 
 * Dependence : $A$와 $B$가 서로 영향을 줌.
 $$P(A\cap B)=P(A)P(B\mid A)=P(B)P(A\mid B)$$
-<h5>Multiplicative Rule</h5>
+##### Multiplicative Rule
 순열을 생각하면 된다.
 If in an experiment the events $A$ and $B$ can both occur, then
 $$P(A\cap B) = P(A)P(B \mid A), P(A)>0$$ 

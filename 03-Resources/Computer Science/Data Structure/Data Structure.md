@@ -1,3 +1,5 @@
+tags : #datastructure 
+
 [[Stack]]
 [[Tree]]
 [[Linked List]]

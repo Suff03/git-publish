@@ -1,4 +1,4 @@
-<h5>Addition Rule</h5>
+##### Addition Rule
 $$P(A\cup B) = P(A)+P(B)-P(A\cap B)$$
 상호 배반시,
 $$P(A\cup B) = P(A)+P(B)$$

@@ -1,12 +1,23 @@
 Elements in probability allow us to draw conclusions about characteristics of hypothetical data taken from the population, based on known features of the population.
 
-<h5>Introduction</h5>
+##### Introduction
+[[Experiment]]
 [[Measures of Location]]
 [[Measures of Variability]]
 [[Counting Sample Points]]
 
-<h5>Probability</h5>
+##### Probability
 [[Probability of an Event]]
 [[Addition Rule]]
 [[Conditional Probability, Independence, and the Product Rule]]
 [[Baye's Rule]]
+
+##### Random Variables and Probability Distributions 
+[[Random Variable]]
+[[Discrete Probability Distribution]]
+[[Continuous Probability Distributions]]
+[[Joint Probability Distributions]]
+
+##### Mathematical Expectation
+[[Mean of a Random Variable]]
+[[Variance and Covariance of Random Variables]]

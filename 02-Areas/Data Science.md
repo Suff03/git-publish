@@ -7,5 +7,3 @@
 	Linux
 	수학 Linear Algebra, 확률과 통계
 	git
-
-* ㅇㅇ
