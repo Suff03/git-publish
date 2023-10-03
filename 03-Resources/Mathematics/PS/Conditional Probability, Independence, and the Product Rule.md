@@ -1,3 +1,6 @@
+tags : #probability 
+
+---
 ##### Conditional Provability
 표본공간 $S$의 두  사건 $A$, $B$에 대하여 확률이 0이 아닌 사건 $A$가 일어났을 떄 사건 $B$가 일어날 확률을 사건 $A$가 일어났을 때의 사건 $B$의 **조건부확률**이라 한다.
 $$P(B \mid A)=\frac{P(A\cap B)}{P(A)}, P(A)>0$$

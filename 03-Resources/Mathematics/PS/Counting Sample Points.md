@@ -1,3 +1,6 @@
+tags : #probability 
+
+---
 ##### Permutation
 $$_nP_r=\frac{n!}{(n-r)!}$$
 

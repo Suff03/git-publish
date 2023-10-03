@@ -1,10 +1,18 @@
+tags : #probability 
+- 전사건의 법칙은?
+- 베이즈 정리의 식과 전개 과정
+- 베이즈 정리의 의미는?
+---
 $$\begin{align*} P(A)  &= P[(E\cap A)\cup(E'\cap A)] \\ &= P(E\cap A) + P(E'\cap A) \\ &=P(E)P(A\mid E)+P(E')P(A\mid E')\end{align*} $$
 ##### Theorem of total probability
+
+^93dee8
+
 If the events $B_1,B_2,...,B_k$ constitute a partition of the sample space $S$
 such that ${P(B_i)}\neq0$ for $i=1,2,...,k$ then for any event $A$ of $S$,
 
 $$P(A)=\sum_{i=1}^{k}P(B_{i}\cap A)=\sum_{i=1}^{k}P(B_{i})P(A\mid B_{i})$$
-
+![[Pasted image 20231002231140.png]]
 ##### Baye's Rule
 `Theorem of total probability`를 이용하여,
 $$P(B_{r\mid}A)=\frac{P(B_{r}\cap A)}{P(A)}=\frac{P(B_{r}\cap A)}{\sum_{i=1}^{k}P(B_{i}\cap A)}=\frac{{P(B_r)}{P(A\mid B)}}{\sum_{i=1}^{k}P(B_{i})P(A\mid B_{i})}$$

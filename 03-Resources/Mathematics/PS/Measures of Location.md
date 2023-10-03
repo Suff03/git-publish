@@ -1,8 +1,11 @@
-<h5>sample mean</h5>
+tags : #probability 
+
+---
+##### sample mean
 numerical average
 $$\overline{x}=\sum_{i=1}^{n}\frac{x_{i}}{n}=\frac{x_{1}+x_{2}+...+x_{n}}{n}$$
 
-<h5>sample median</h5>
+##### sample median
 $$
 \begin{equation}
        med(x) = 
@@ -13,7 +16,7 @@ $$
     \end{equation}
 $$
 
-<h5>trimmed median</h5>
+#### trimmed median
 $$\overline{x}_{tr(10)}$$
 computed by "trimming away" a certain percent of both the largest and the smallest set of values.
 

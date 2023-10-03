@@ -135,3 +135,39 @@ trade-off 직관적으로 데이터 보기 어려운 단점
 해결)
 저장할 때는 별도로 테이블 보관
 	보여줄 때는 합쳐서
+
+---
+Join
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q0UHWaDRwlk?si=ltf_yiP_poTJHtxp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+Join은 각각 독립적인 분리 테이블 -> 하나의 테이블로 합
+
+```mysql
+SELECT topic.id AS topic_id, title, description, created, name, profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+```
+
+---
+인터넷과 데이터베이스
+
+MySQL - 인터넷 활용하도록 고안
+
+데이터베이스 서버
+
+인터넷 : 컴퓨터들 간의 사회 - 컴퓨터 한계 초월, 정보 요청(클라이언트), 응답(서버)
+
+---
+MySQL Clinet
+
+not gui, 명령어 기반
+
+장점 : 어디서든 실행할 수 있음
+
+---
+MySQL Workbench
+
+모든 client들은 결국에는 SQL을 MySQL 서버에 전송함으로써 데이터베이스를 제어한다.
+
+---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ySH4-hEdiTs?si=pVkDjPTOGVGdHWOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+SQL

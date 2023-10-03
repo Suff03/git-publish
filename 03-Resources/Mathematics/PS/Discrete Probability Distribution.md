@@ -9,6 +9,9 @@ $$
 $$
 
 ##### Cummulative Distribution Function
+
+^05a690
+
 모든 실수 $x$에 대한 $F(x)=P(X\leq x)$를 확률변수 $X$에 대한 **누적분포함수**라고 한다.
 $$
 F(x)=P(X\leq x)=\sum_{t\leq x}^{}f(t), -\infty<x<\infty
