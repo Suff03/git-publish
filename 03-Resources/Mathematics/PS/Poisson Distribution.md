@@ -4,7 +4,7 @@ tags : #probability
 - 포아송 분포의 식과 기댓값, 분산
 - 이항분포의 포아송 분포 근사
 ---
-수많은 사건 중, $(n\rightarrow\infty)$ **특정한 사건이 발생할 확률이 매우 작을 때** $(p\rightarrow 0)$ 사용하는 분포이다.
+수많은 사건 중, $(n\rightarrow\infty)$ **특정한 사건이 발생할 확률이 매우 작을 때** $(p\rightarrow 0)$ 사용하는 분포이다. 현대에는 계산 기술이 발달해서 잘 쓰이진 않는다.
 
 일정한 시간간격 $t$ 동안에 특정 사건이 발생하는 결과의 수를 나타내는 포아송 확률변수 $X$의 확률분포는,
 $$p(x;\lambda t)=\frac{e^{-\lambda t}(\lambda t)^x}{x!}$$
@@ -17,5 +17,7 @@ $$\begin{align*}
 &\sigma^2=\lambda t
 \end{align*}$$
 ##### Poisson Approximation to Binomial
-$(n\rightarrow\infty)$, $(p\rightarrow 0)$일 때, 이항분포를 포아송 분포로 근사시킬 수 있다.
+$(n\rightarrow\infty)$, $(p\rightarrow 0)$일 때, 이항분포를 포아송 분포로 근사시킬 수 있다.\
 $$b(x;n,p)\xrightarrow[]{n\rightarrow\infty}p(x;\mu)$$
+
+$\lambda$에 이항분포의 평균 $np$를 대입한다.

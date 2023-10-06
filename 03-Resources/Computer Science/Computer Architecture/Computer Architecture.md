@@ -17,3 +17,8 @@
 [[Performence]]
 [[Power Wall]]
 [[Moore's law]]
+
+[[ISA]]
+[[Signed and Unsigned Numbers]]
+[[Generating Constants]]
+

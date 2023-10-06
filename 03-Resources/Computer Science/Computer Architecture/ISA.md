@@ -67,8 +67,67 @@ addi s0, s1, 6
 addi는 오직 하나의 immediate number만 허용한다.
 적은 상수를 직접적으로 사용하면서 명령어를 로드하는 시간을 줄이고 속도를 높인다.
 
+addi는 Sign-Extended 12-bit immediate를 사용한다.
+
 ##### Memory Operands
+레지스터와 메모리가 서로 소통하는 연산자.
+
 큰 숫자를 레지스터나 Immediate 안에 저장할 수 없다.
 따라서, 메모리에 저장 되어있는 큰 숫자를 로드한다.
 
-**Load** from Memory, **Store** at Memory
+종류는 크게 두 가지로 나누어 진다. **Load** from Memory, **Store** at Memory
+
+- Load
+	메모리로부터 레지스터에 Data를 읽는다.
+
+- Store
+	레지스터에 있는 Data를 메모리에 저장한다.
+
+
+**Load**
+```assembly
+lw s3, 8(zero) // read word at address 8 into s3
+```
+참고로, `Immediate Number` 8(zero)는 $0 + 8 = 8$로 계산한다.
+`s3`는 메모리로부터 <u>Read</u>된 값이 들어갈 Destination Register이다.
+
+**Store**
+```assembly
+sw t7, 0x10(zero) // write t7 into adress 16
+```
+레지스터 `t7`에 있는 값을 0x10(zero) ($0 + 0\text{x}10 = 0\text{x}10$) 주소의 메모리 공간에 <u>저장</u>한다.
+
+Ex)
+```C
+a[12] = h + a[8];
+// h in x21
+// base address of a in x22
+```
+[[C]]언어로 작성된 이 코드는 RISC-V assembly code로 어떤 모습일까?
+
+```assembly
+lw x9, 32(x22) // base + 32
+add x9, x21, x9 // x9 <- h + a[8]
+sw x9, 48(x22) // store x9 at a[12]
+```
+
+**해석**
+```assembly
+lw x9, 32(x22)
+```
+
+메모리 주소 32(x22) 즉, x22(Base address : a[0]의 주소) + 32(8칸) = a[8]의 값을 `Word` 단위로 `Load` 해서 x9에 저장해라.
+
+```assembly
+add x9, x21, x9
+```
+
+`add` 연산자는 `Register Operator`이다. x21(h의 주소)의 값과 x9의 값을 더한 후, x9에 저장해라.
+
+```assembly
+sw x9, 48(x22)
+```
+레지스터 x9에 있는 값을 48(x22) 즉, x22 + 48(12칸) = a[12]에 저장해라.
+
+레지스터는 메모리보다 빠르다. 메모리를 동반한 연산은 `load`와 `store`가 필요하므로, 더 많은 명령어 연산을 필요로 한다. 따라서, 컴파일러는 연산량을 줄이기 위해 레지스터를 최대한 많이 활용해야 한다. **레지스터의 최적화**가 필요하다.
+

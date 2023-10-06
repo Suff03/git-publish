@@ -31,3 +31,5 @@ tags : #algorithm
 
 ##### Dynamic Programming
 [[Dynamic Programming]]
+
+##### Greedy Algorithm
