@@ -31,3 +31,10 @@ Elements in probability allow us to draw conclusions about characteristics of hy
 [[Negative Binomial Distribution]]
 [[Hypergeometric Distribution]]
 [[Poisson Distribution]]
+
+##### Continuous Probability Distributions
+[[Continuous Uniform Distribution]]
+[[Normal Distribution]]
+[[Gamma Distribution]]
+[[Exponential Distribution]]
+[[Chi-Squared Distribution]]

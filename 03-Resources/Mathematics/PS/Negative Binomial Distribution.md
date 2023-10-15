@@ -28,6 +28,6 @@ $$b^*(x;k,p)={x-1\choose k-1}p^k(1-p)^{x-k}$$
 
 음이항분포의 평균과 분산은,
 $$\begin{align*}
-&\mu=\frac{r}{p}\\
-&\sigma^2=\frac{r(1-p)}{p^{2}}
+&\mu=\frac{k}{p}\\
+&\sigma^2=\frac{k(1-p)}{p^{2}}
 \end{align*}$$

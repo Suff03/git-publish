@@ -1,3 +1,7 @@
+tags : #computerarchitecture 
+
+---
+
 컴퓨터 구조는 시스템의 기본적인 구조와 동작 원리를 배우는 이론이다.
 
 ##### Why need to learn?
@@ -21,4 +25,5 @@
 [[ISA]]
 [[Signed and Unsigned Numbers]]
 [[Generating Constants]]
+[[Function Calls]]
 

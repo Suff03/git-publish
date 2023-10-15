@@ -31,5 +31,20 @@ tags : #algorithm
 
 ##### Dynamic Programming
 [[Dynamic Programming]]
+[[Assembly Line Scheduling]]
+[[Matrix Chain Multiplication]]
 
 ##### Greedy Algorithm
+[[Greedy Algorithm]]
+[[Activity Selection Problem]]
+[[Matroid]]
+
+##### Disjoint Set
+[[Disjoint Sets]]
+[[Connected Component]]
+
+##### Graph Algorithms
+[[Graph]]
+[[Breadth-First Search]]
+[[Depth-Fisrt Search]]
+

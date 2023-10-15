@@ -131,3 +131,48 @@ sw x9, 48(x22)
 
 레지스터는 메모리보다 빠르다. 메모리를 동반한 연산은 `load`와 `store`가 필요하므로, 더 많은 명령어 연산을 필요로 한다. 따라서, 컴파일러는 연산량을 줄이기 위해 레지스터를 최대한 많이 활용해야 한다. **레지스터의 최적화**가 필요하다.
 
+##### Logical Instructions
+`Logical`은 논리 게이트를 말한다.
+
+![[Pasted image 20231010193128.png]]
+`XOR` 연산은 `Parity Bit`에 자주 쓰인다.
+Not 연산은 `NOT a = a XOR -1`을 통해 수행한다.
+
+`immediate`와 논리 연산을 할 시, `Sign-Extended`를 고려해야 한다.
+
+##### Shift Instructions
+`Bit`의 포지션을 변경한다.
+RISC-V에서 레지스터의 크기는 32-bit이므로, `0 ~ 31`번 까지 Shift 연산이 가능하다. 따라서, 레지스터의 끝의 `5-bit`만 받을 수 있다.
+
+- sll - `<<`
+왼쪽으로 비트 연산을 수행한다. 빈 공간을 0으로 채운다.
+
+- srl - `>>`
+오른쪽으로 비트 연산을 수행한다. 빈 공간을 0으로 채운다.
+
+- sra - `>>>`
+산술 연산이다. 오른쪽으로 비트 연산을 수행한다. 빈 공간을 Sign bit로 채운다. `MSB`
+
+##### Branch Instructions
+![[Drawing 2023-10-10 19.43.12.excalidraw|600]]
+다음에 실행할 명령어의 주소를 저장하는 `Program Counter` 레지스터가 `branch` 명령어를 만나면, `PC`값을 변경시킨다. 그리고 변경된 주소로 이동하여 명령을 수행한다.
+
+`Branch Instructions`는 크게 ==두 가지==로 나누어 진다.
+
+![[Pasted image 20231010195546.png]]
+
+- Conditional
+	조건에 따라... `A or B`
+
+- Unconditional
+	조건 X, 다른 pc로 `jump`
+
+##### Basic Block
+![[Drawing 2023-10-10 19.48.32.excalidraw|500]]
+한 번 [[Instruction]]이 수행되면, **반드시 끝까지 수행**되는 공간.
+
+`jump`를 통해 다른 곳에서 들어오거나(처음 제외), `branch`를 통해 다른 곳으로 나가는 곳이 없어야 한다.(마지막 제외)
+
+프로세스의 성능을 측정하는 중요한 지표가 된다. branch 명령어가 많을 수록 성능이 저하되기 때문이다.
+
+보통 size는 4에서 5 정도 된다.
